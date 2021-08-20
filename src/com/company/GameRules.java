@@ -19,7 +19,24 @@ public class GameRules {
             dealerhand.add(deck.pop());
 
         }
-        public static void BlackJackHitMe(Stack<Card> deck, Stack<Card> Hand){
+        public static void BlackJackHitMe(Stack<Card> deck, Stack<Card> hand){
+            hand.add(deck.pop());
+        }
+
+        public static int BlackJackCheckValues(Stack<Card> hand){
+            int totalCards= 0;
+        for (Card c: hand){
+            totalCards += c.getCardValue();
+          }
+
+        if (totalCards > 21){
+                return -1;
+            } else {
+                return totalCards;
+            }
+        }
+
+        public static void BlackJackEndTurn(){
 
         }
 }
