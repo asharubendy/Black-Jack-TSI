@@ -1,5 +1,8 @@
 package com.company;
 
-public class Player {
-    
+import java.util.Stack;
+
+public class Player extends Person{
+
+
 }

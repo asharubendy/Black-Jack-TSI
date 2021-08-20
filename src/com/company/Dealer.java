@@ -1,4 +1,7 @@
 package com.company;
 
-public class Dealer {
+import java.util.Stack;
+
+public class Dealer extends Person{
+
 }
