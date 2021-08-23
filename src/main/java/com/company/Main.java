@@ -23,7 +23,7 @@ public class Main {
     public static void gameLogicBlackJack(){
         boolean playerTurn = true;
         while(playerTurn) {
-            ShowHands();
+            showHands();
             if(GameRules.blackJackCheckValues(player.getHand()) == -1){
                 System.out.println("You've gone bust! Do you want to play again?");
                 break;
@@ -35,14 +35,14 @@ public class Main {
 
                 switch (choice) {
                     case 1 -> GameRules.blackJackHitMe(deck, player.getHand());
-                    case 2,3  -> playerTurn = false;
+                    default -> playerTurn = false;
                 }
             } else {
                 System.out.println("Win State");
             }
         }
     }
-    public  static void ShowHands(){
+    public  static void showHands(){
         dealer.showHand();
         player.showHand();
     }

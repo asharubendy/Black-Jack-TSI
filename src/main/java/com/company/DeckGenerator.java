@@ -2,16 +2,15 @@ package com.company;
 import java.util.Collections;
 import java.util.Stack;
 
-public class DeckGenerator {
+public final class DeckGenerator {
 
-
-    public static Stack<Card>getDeck() {
+    static Stack<Card>getDeck() {
         return generateDeck();
     }
 
     private static Stack<Card> generateDeck() {
         Stack<Card> deck = new Stack<>();
-        int suitSize = Deck.getAmountInEachSuite();
+        int suitSize = Deck.getAmountInEachSuit();
         String[] suits = Deck.getSuitType();
         for (int suitCount = 0; suitCount <= 3; suitCount++) {
             for (int i = 1; i <= suitSize; i++) {

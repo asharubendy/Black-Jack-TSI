@@ -1,11 +1,10 @@
 package com.company;
 import java.util.Stack;
 
-public class GameRules {
+public final class GameRules {
 
 
-    public GameRules() {
-
+    private GameRules() {
     }
 
     public static void blackJackGameRules(Stack<Card> deck){
@@ -42,7 +41,7 @@ public class GameRules {
             }
         }
 
-        public static void BlackJackAceRules(Stack<Card> hand){
+        public static void blackJackAceRules(Stack<Card> hand){
         int totalCardValue = blackJackCheckValues(hand);
         for (Card c: hand){
             if(c.getCardValue() == 1 && totalCardValue >= 10){
