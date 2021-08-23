@@ -36,6 +36,17 @@ public class GameRules {
             }
         }
 
+        public static void BlackJackAceRules(Stack<Card> hand){
+        int totalCardValue = BlackJackCheckValues(hand);
+        for (Card c: hand){
+            if(c.getCardValue() == 1 && totalCardValue >= 10){
+                c.setCardValue(11);
+            }
+            }
+        }
+
+
+
         public static void BlackJackEndTurn(){
 
         }

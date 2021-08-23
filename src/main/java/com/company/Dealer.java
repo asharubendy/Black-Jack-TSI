@@ -9,4 +9,7 @@ public class Dealer extends Person{
             CardImageGenerator.GenerateCardVisual(c.getSuit(),c.getCardValue());
         }
     }
+//    public void dealerPlay(Stack<Card> hand, Stack<Card> deck{
+//
+//    }
 }

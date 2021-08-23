@@ -25,11 +25,11 @@ public class Main {
         while(playerTurn) {
             ShowHands();
             if(GameRules.BlackJackCheckValues(player.getHand()) == -1){
-                System.out.println("Lose state");
+                System.out.println("You've gone bust! Do you want to play again?");
                 break;
             } else if(GameRules.BlackJackCheckValues(player.getHand()) != 21) {
-                System.out.print("Your total is: " + GameRules.BlackJackCheckValues((player.getHand())));
-                System.out.println("What would you like to do? \n 1. Hit Me \n 2. Hold");
+                System.out.print("Your total is: " + GameRules.BlackJackCheckValues(player.getHand()));
+                System.out.println("\nWhat would you like to do? \n 1. Hit Me \n 2. Hold");
                 int choice = input.nextInt();
                 input.nextLine();
 
