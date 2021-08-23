@@ -6,72 +6,59 @@ public class CardImageGenerator {
         generateCardVisual(type, cardValue);
     }
 
+
     private static void generateCardVisual(String type, int cardValue) {
-        if(cardValue < 9) {
-            if (type.equals("Clubs")) {
-                System.out.println("\n _____");
-                System.out.println( "|" + cardValue + "    |");
-                System.out.println("|  ♣  |");
-                System.out.println("|    " + cardValue + "|");
-                System.out.println(" ¯¯¯¯¯");
-            } else if (type.equals("Diamonds")) {
-                System.out.println("\n _____");
-                System.out.println("|" + cardValue + "    |");
-                System.out.println("|  ♦  |");
-                System.out.println("|    " + cardValue + "|");
-                System.out.println(" ¯¯¯¯¯");
-            } else if (type.equals("Hearts")) {
-                System.out.println("\n _____");
-                System.out.println("|" + cardValue + "    |");
-                System.out.println("|  ♥  |");
-                System.out.println("|    " + cardValue + "|");
-                System.out.println(" ¯¯¯¯¯");
-            } else if (type.equals("Spades")) {
-                System.out.println("\n _____");
-                System.out.println("|" + cardValue + "    |");
-                System.out.println("|  ♠  |");
-                System.out.println("|    " + cardValue + "|");
-                System.out.println(" ¯¯¯¯¯");
-            } else {
-                System.out.println("\n _____");
-                System.out.println("|" + cardValue + "    |");
-                System.out.println("|  ?  |");
-                System.out.println("|    " + cardValue + "|");
-                System.out.println(" ¯¯¯¯¯");
-            }
+        String leftCorner ="";
+        String rightCorner = "";
+
+
+        if (cardValue < 9){
+            leftCorner ="|    ";
+            rightCorner ="    |";
         } else {
-                if (type.equals("Clubs")) {
-                    System.out.println("\n _____");
-                    System.out.println("|" + cardValue + "   |");
-                    System.out.println("|  ♣  |");
-                    System.out.println("|   " + cardValue + "|");
-                    System.out.println(" ¯¯¯¯¯");
-                } else if (type.equals("Diamonds")) {
-                    System.out.println("\n _____");
-                    System.out.println("|" + cardValue + "   |");
-                    System.out.println("|  ♦  |");
-                    System.out.println("|   " + cardValue + "|");
-                    System.out.println(" ¯¯¯¯¯");
-                } else if (type.equals("Hearts")) {
-                    System.out.println("\n _____");
-                    System.out.println("|" + cardValue + "   |");
-                    System.out.println("|  ♥  |");
-                    System.out.println("|   " + cardValue + "|");
-                    System.out.println(" ¯¯¯¯¯");
-                } else if (type.equals("Spades")) {
-                    System.out.println("\n _____");
-                    System.out.println("|" + cardValue + "   |");
-                    System.out.println("|  ♠  |");
-                    System.out.println("|   " + cardValue + "|");
-                    System.out.println(" ¯¯¯¯¯");
-                } else {
-                    System.out.println("\n _____");
-                    System.out.println("|" + cardValue + "   |");
-                    System.out.println("|  ?  |");
-                    System.out.println("|   " + cardValue + "|");
-                    System.out.println(" ¯¯¯¯¯");
-                }
+            rightCorner ="   |";
+            leftCorner ="|   ";
+        }
+
+
+        switch (type) {
+            case "Clubs" -> {
+                System.out.println("\n _____");
+                System.out.println("|" + cardValue + rightCorner);
+                System.out.println("|  ♣  |");
+                System.out.println(leftCorner + cardValue + "|");
+                System.out.println(" ¯¯¯¯¯");
             }
+            case "Diamonds" -> {
+                System.out.println("\n _____");
+                System.out.println("|" + cardValue + rightCorner);
+                System.out.println("|  ♦  |");
+                System.out.println(leftCorner + cardValue + "|");
+                System.out.println(" ¯¯¯¯¯");
+            }
+            case "Hearts" -> {
+                System.out.println("\n _____");
+                System.out.println("|" + cardValue + rightCorner);
+                System.out.println("|  ♥  |");
+                System.out.println(leftCorner + cardValue + "|");
+                System.out.println(" ¯¯¯¯¯");
+            }
+            case "Spades" -> {
+                System.out.println("\n _____");
+                System.out.println("|" + cardValue + rightCorner);
+                System.out.println("|  ♠  |");
+                System.out.println(leftCorner + cardValue + "|");
+                System.out.println(" ¯¯¯¯¯");
+            }
+            default -> {
+                System.out.println("\n _____");
+                System.out.println("|" + cardValue + rightCorner);
+                System.out.println("|  ?  |");
+                System.out.println(leftCorner + cardValue + "|");
+                System.out.println(" ¯¯¯¯¯");
+            }
+        }
+
     }
 }
 
