@@ -2,8 +2,11 @@ package com.company;
 
 public class CardImageGenerator {
 
+    public CardImageGenerator(String type, int cardValue) {
+        generateCardVisual(type, cardValue);
+    }
 
-    public static void generateCardVisual(String type, int cardValue) {
+    private static void generateCardVisual(String type, int cardValue) {
         if(cardValue < 9) {
             if (type.equals("Clubs")) {
                 System.out.println("\n _____");

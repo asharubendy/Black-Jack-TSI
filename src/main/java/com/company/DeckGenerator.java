@@ -1,10 +1,15 @@
 package com.company;
-
 import java.util.Collections;
 import java.util.Stack;
 
 public class DeckGenerator {
-    public static Stack<Card> generateDeck() {
+
+
+    public static Stack<Card>getDeck() {
+        return generateDeck();
+    }
+
+    private static Stack<Card> generateDeck() {
         Stack<Card> deck = new Stack<>();
         int suitSize = Deck.getAmountInEachSuite();
         String[] suits = Deck.getSuitType();

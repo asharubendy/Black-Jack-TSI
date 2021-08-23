@@ -2,6 +2,12 @@ package com.company;
 import java.util.Stack;
 
 public class GameRules {
+
+
+    public GameRules() {
+
+    }
+
     public static void blackJackGameRules(Stack<Card> deck){
         for (Card c:deck)
         {

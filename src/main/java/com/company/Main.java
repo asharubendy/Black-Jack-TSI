@@ -15,7 +15,7 @@ public class Main {
     }
 
     public static void gameSetupBlackJack(){
-        deck = DeckGenerator.generateDeck();
+        deck = DeckGenerator.getDeck();
         GameRules.blackJackGameRules(deck);
         GameRules.blackJackDealNewHand(deck, player.getHand(), dealer.getHand());
     }
@@ -35,7 +35,7 @@ public class Main {
 
                 switch (choice) {
                     case 1 -> GameRules.blackJackHitMe(deck, player.getHand());
-                    case 2 -> { playerTurn = false;}
+                    case 2,3  -> playerTurn = false;
                 }
             } else {
                 System.out.println("Win State");

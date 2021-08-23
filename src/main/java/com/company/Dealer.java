@@ -6,7 +6,7 @@ public class Dealer extends Person{
     public void showHand (){
         System.out.println("The dealers hand is:");
         for (Card c:getHand()) {
-            CardImageGenerator.generateCardVisual(c.getSuit(),c.getCardValue());
+           new CardImageGenerator(c.getSuit(),c.getCardValue());
         }
     }
 }

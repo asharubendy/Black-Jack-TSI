@@ -27,7 +27,7 @@ private int startingMoney = 500;
     public void showHand (){
         System.out.println("Your current hand is:");
         for (Card c:getHand()) {
-            CardImageGenerator.generateCardVisual(c.getSuit(),c.getCardValue());
+            new CardImageGenerator(c.getSuit(),c.getCardValue());
         }
 
     }
