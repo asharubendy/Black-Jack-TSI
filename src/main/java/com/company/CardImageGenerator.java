@@ -10,7 +10,7 @@ public class CardImageGenerator {
     private static void generateCardVisual(String type, int cardValue) {
         String leftCorner ="";
         String rightCorner = "";
-
+        String cardType = "";
 
         if (cardValue < 9){
             leftCorner ="|    ";
@@ -19,45 +19,17 @@ public class CardImageGenerator {
             rightCorner ="   |";
             leftCorner ="|   ";
         }
-
-
+        
         switch (type) {
-            case "Clubs" -> {
-                System.out.println("\n _____");
-                System.out.println("|" + cardValue + rightCorner);
-                System.out.println("|  ♣  |");
-                System.out.println(leftCorner + cardValue + "|");
-                System.out.println(" ¯¯¯¯¯");
-            }
-            case "Diamonds" -> {
-                System.out.println("\n _____");
-                System.out.println("|" + cardValue + rightCorner);
-                System.out.println("|  ♦  |");
-                System.out.println(leftCorner + cardValue + "|");
-                System.out.println(" ¯¯¯¯¯");
-            }
-            case "Hearts" -> {
-                System.out.println("\n _____");
-                System.out.println("|" + cardValue + rightCorner);
-                System.out.println("|  ♥  |");
-                System.out.println(leftCorner + cardValue + "|");
-                System.out.println(" ¯¯¯¯¯");
-            }
-            case "Spades" -> {
-                System.out.println("\n _____");
-                System.out.println("|" + cardValue + rightCorner);
-                System.out.println("|  ♠  |");
-                System.out.println(leftCorner + cardValue + "|");
-                System.out.println(" ¯¯¯¯¯");
-            }
-            default -> {
-                System.out.println("\n _____");
-                System.out.println("|" + cardValue + rightCorner);
-                System.out.println("|  ?  |");
-                System.out.println(leftCorner + cardValue + "|");
-                System.out.println(" ¯¯¯¯¯");
-            }
+            case "Clubs" -> cardType = "\n|  ♣  |\n";
+            case "Diamonds" -> cardType = "\n|  ♦  |\n";
+            case "Hearts" -> cardType = "\n|  ♥  |\n";
+            case "Spades" -> cardType = "\n|  ♠  |\n";
+            default -> cardType = "\n|  ?  |\n";
+
+
         }
+        System.out.println("\n _____\n" + "|" + cardValue + rightCorner + cardType + leftCorner + cardValue + "|\n" + " ¯¯¯¯¯");
 
     }
 }
