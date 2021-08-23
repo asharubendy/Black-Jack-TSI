@@ -2,7 +2,7 @@ package com.company;
 
 public class CardImageGenerator {
 
-    public CardImageGenerator(String type, int cardValue) {
+    CardImageGenerator(String type, int cardValue) {
         generateCardVisual(type, cardValue);
     }
 
