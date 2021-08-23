@@ -18,14 +18,14 @@ public class Card extends Deck {
     public String getSuit() {
         return suit;
     }
-    public void setSuit(String suit) {
-        suit = suit;
+    public void setSuit(String suitInput) {
+        this.suit = suitInput;
     }
     public boolean isFaceCard() {
         return isFaceCard;
     }
     public void setFaceCard(boolean faceCard) {
-        isFaceCard = faceCard;
+        this.isFaceCard = faceCard;
     }
     public String getFaceCardType() {
         return faceCardType;

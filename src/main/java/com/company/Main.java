@@ -10,32 +10,32 @@ public class Main {
 
     public static void main(String[] args) {
         // write your code here
-        GameSetupBlackJack();
-        GameLogicBlackJack();
+        gameSetupBlackJack();
+        gameLogicBlackJack();
     }
 
-    public static void GameSetupBlackJack(){
-        deck = DeckGenerator.GenerateDeck();
-        GameRules.BlackJackGameRules(deck);
-        GameRules.BlackJackDealNewHand(deck, player.getHand(), dealer.getHand());
+    public static void gameSetupBlackJack(){
+        deck = DeckGenerator.generateDeck();
+        GameRules.blackJackGameRules(deck);
+        GameRules.blackJackDealNewHand(deck, player.getHand(), dealer.getHand());
     }
 
-    public static void GameLogicBlackJack(){
+    public static void gameLogicBlackJack(){
         boolean playerTurn = true;
         while(playerTurn) {
             ShowHands();
-            if(GameRules.BlackJackCheckValues(player.getHand()) == -1){
+            if(GameRules.blackJackCheckValues(player.getHand()) == -1){
                 System.out.println("You've gone bust! Do you want to play again?");
                 break;
-            } else if(GameRules.BlackJackCheckValues(player.getHand()) != 21) {
-                System.out.print("Your total is: " + GameRules.BlackJackCheckValues(player.getHand()));
+            } else if(GameRules.blackJackCheckValues(player.getHand()) != 21) {
+                System.out.print("Your total is: " + GameRules.blackJackCheckValues(player.getHand()));
                 System.out.println("\nWhat would you like to do? \n 1. Hit Me \n 2. Hold");
                 int choice = input.nextInt();
                 input.nextLine();
 
                 switch (choice) {
-                    case 1 -> GameRules.BlackJackHitMe(deck, player.getHand());
-                    case 2 -> {GameRules.BlackJackEndTurn(); playerTurn = false;}
+                    case 1 -> GameRules.blackJackHitMe(deck, player.getHand());
+                    case 2 -> { playerTurn = false;}
                 }
             } else {
                 System.out.println("Win State");

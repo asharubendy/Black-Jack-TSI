@@ -4,7 +4,7 @@ import java.util.Collections;
 import java.util.Stack;
 
 public class DeckGenerator {
-    public static Stack<Card> GenerateDeck() {
+    public static Stack<Card> generateDeck() {
         Stack<Card> deck = new Stack<>();
         int suitSize = Deck.getAmountInEachSuite();
         String[] suits = Deck.getSuitType();
@@ -20,9 +20,9 @@ public class DeckGenerator {
               deck.push(card);
             }
         }
-       return (ShuffleDeck(deck));
+       return (shuffleDeck(deck));
     }
-    public static Stack<Card> ShuffleDeck(Stack<Card> deck){
+    public static Stack<Card> shuffleDeck(Stack<Card> deck){
         Collections.shuffle(deck);
         return deck;
     }

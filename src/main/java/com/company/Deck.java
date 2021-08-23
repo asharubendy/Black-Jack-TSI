@@ -17,8 +17,8 @@ public class Deck {
         return amount;
     }
 
-    public void setAmount(int amount) {
-        this.amount = amount;
+    public static void setAmount(int amount) {
+        Deck.amount = amount;
     }
 
     public static int getAmountInEachSuite() {
@@ -27,6 +27,6 @@ public class Deck {
     }
 
     public void setAmountInEachSuite(int amountInEachSuite) {
-        this.amountInEachSuite = amountInEachSuite;
+        Deck.amountInEachSuite = amountInEachSuite;
     }
 }
