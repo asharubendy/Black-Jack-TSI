@@ -2,12 +2,12 @@ package com.company;
 
 public class Card extends Deck {
     private int cardValue;
-    private String Suit;
-    private boolean IsFaceCard;
-    private String FaceCardType;
-    public Card(int cardValue, String suit) {
+    private String suit;
+    private boolean isFaceCard;
+    private String faceCardType;
+    public Card(int cardValue, String suitInput) {
         this.cardValue = cardValue;
-        Suit = suit;
+        suit = suitInput;
     }
     public int getCardValue() {
         return cardValue;
@@ -16,21 +16,21 @@ public class Card extends Deck {
         this.cardValue = cardValue;
     }
     public String getSuit() {
-        return Suit;
+        return suit;
     }
     public void setSuit(String suit) {
-        Suit = suit;
+        suit = suit;
     }
     public boolean isFaceCard() {
-        return IsFaceCard;
+        return isFaceCard;
     }
     public void setFaceCard(boolean faceCard) {
-        IsFaceCard = faceCard;
+        isFaceCard = faceCard;
     }
     public String getFaceCardType() {
-        return FaceCardType;
+        return faceCardType;
     }
-    public void setFaceCardType(String faceCardType) {
-        FaceCardType = faceCardType;
+    public void setFaceCardType(String faceCardTypeInput) {
+        faceCardType = faceCardTypeInput;
     }
 }
