@@ -42,7 +42,7 @@ public class Main {
             }
         }
     }
-    public  static void showHands(){
+    public static void showHands(){
         dealer.showHand();
         player.showHand();
     }
