@@ -4,6 +4,8 @@
     <artifactId>Black-Jack-TSI</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
+
+
     <dependencies>
         <dependency>
             <groupId>org.junit.jupiter</groupId>
@@ -45,6 +47,7 @@
                 <artifactId>jacoco-maven-plugin</artifactId>
                 <version>${jacoco.version}</version>
                 <configuration>
+
                     <destFile>${basedir}/target/coverage-reports/jacoco-unit.exec</destFile>
                     <dataFile>${basedir}/target/coverage-reports/jacoco-unit.exec</dataFile>
                     <output>file</output>
@@ -55,7 +58,7 @@
                 </configuration>
                 <executions>
                     <execution>
-                        <id>jacoco-initialize</id>
+                        <id>default-prepare-agent</id>
                         <goals>
                             <goal>prepare-agent</goal>
                         </goals>
@@ -74,9 +77,15 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.0.0-M5</version>
-                <configuration>
-                    <argLine>${argLine}</argLine>
-                </configuration>
+                <executions>
+                    <execution>
+                        <id>default-test</id>
+                        <phase>test</phase>
+                        <goals>
+                            <goal>test</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>
