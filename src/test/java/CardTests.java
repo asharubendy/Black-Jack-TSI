@@ -24,6 +24,6 @@ public class CardTests {
         assertTrue(c.isFaceCard(), "Test failed for assertion of is face card value");
         assertEquals(c.getFaceCardType(),"Hearts", "Test failed for assertion of card type");
     }
-    
+
 }
 
