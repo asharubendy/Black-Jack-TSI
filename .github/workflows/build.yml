@@ -30,11 +30,11 @@ jobs:
           key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
           restore-keys: ${{ runner.os }}-m2
 
-      - name: jacoco possibily
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        run: mvn -Dsonar.coverage.jacoco.xmlReportPaths=report1.xml,report2.xml sonar:sonar
+#      - name: jacoco possibily
+#        env:
+#          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
+#          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+#        run: mvn -Dsonar.coverage.jacoco.xmlReportPaths=report1.xml,report2.xml sonar:sonar
 
       - name: Build and analyze
         env:
