@@ -1,0 +1,10 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+Black-Jack-TSI,com.company,CardImageGenerator,55,0,7,0,19,0,7,0,2,0
+Black-Jack-TSI,com.company,Deck,12,25,0,0,7,3,5,2,5,2
+Black-Jack-TSI,com.company,Main,58,0,4,0,23,0,8,0,6,0
+Black-Jack-TSI,com.company,Person,46,0,2,0,13,0,7,0,6,0
+Black-Jack-TSI,com.company,GameRules,100,0,14,0,25,0,12,0,5,0
+Black-Jack-TSI,com.company,Dealer,24,0,2,0,5,0,3,0,2,0
+Black-Jack-TSI,com.company,DeckGenerator,76,0,8,0,17,0,9,0,4,0
+Black-Jack-TSI,com.company,Card,22,15,0,0,10,6,6,3,6,3
+Black-Jack-TSI,com.company,Player,3,0,0,0,1,0,1,0,1,0
