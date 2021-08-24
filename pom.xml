@@ -23,7 +23,7 @@
                 <version>0.8.7</version>
                     <executions>
                     <execution>
-                    <id>report</id>
+                        <id>jacoco-report</id>
                     <goals>
                         <goal>report-aggregate</goal>
                     </goals>
