@@ -6,5 +6,5 @@ Black-Jack-TSI,com.company,Person,46,0,2,0,13,0,7,0,6,0
 Black-Jack-TSI,com.company,GameRules,100,0,14,0,25,0,12,0,5,0
 Black-Jack-TSI,com.company,Dealer,24,0,2,0,5,0,3,0,2,0
 Black-Jack-TSI,com.company,DeckGenerator,76,0,8,0,17,0,9,0,4,0
-Black-Jack-TSI,com.company,Card,22,15,0,0,10,6,6,3,6,3
+Black-Jack-TSI,com.company,Card,4,33,0,0,2,14,1,8,1,8
 Black-Jack-TSI,com.company,Player,3,0,0,0,1,0,1,0,1,0

@@ -1,0 +1,4 @@
+# Created at 2021-08-24T17:06:17.707
+Boot Manifest-JAR contains absolute paths in classpath 'B:\Github Projects\Black-Jack-TSI\target\test-classes'
+Hint: <argLine>-Djdk.net.URLClassPath.disableClassPathURLCheck=true</argLine>
+
