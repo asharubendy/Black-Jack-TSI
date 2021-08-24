@@ -22,25 +22,21 @@ public class Main {
 
     public static void gameLogicBlackJack(){
         boolean playerTurn = true;
-        while(playerTurn) {
+        while(true) {
             showHands();
             if(GameRules.blackJackCheckValues(player.getHand()) == -1){
-                System.out.println("You've gone bust! Do you want to play again?");
+//                System.out.println("You've gone bust! Do you want to play again?");
                 break;
             } else if(GameRules.blackJackCheckValues(player.getHand()) != 21) {
-                System.out.print("Your total is: " + GameRules.blackJackCheckValues(player.getHand()));
-                System.out.println("\nWhat would you like to do? \n 1. Hit Me \n 2. Hold");
+//                System.out.print("Your total is: " + GameRules.blackJackCheckValues(player.getHand()));
+//                System.out.println("\nWhat would you like to do? \n 1. Hit Me \n 2. Hold");
                 int choice = 1;
 
 //                input.nextLine();
 
-                switch (choice) {
-                    case 1 -> GameRules.blackJackHitMe(deck, player.getHand());
-                    default -> playerTurn = false;
-                }
-            } else {
-                System.out.println("Win State");
-            }
+                GameRules.blackJackHitMe(deck, player.getHand());
+            }  //                System.out.println("Win State");
+
         }
     }
     public static void showHands(){
