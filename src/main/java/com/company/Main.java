@@ -30,8 +30,9 @@ public class Main {
             } else if(GameRules.blackJackCheckValues(player.getHand()) != 21) {
                 System.out.print("Your total is: " + GameRules.blackJackCheckValues(player.getHand()));
                 System.out.println("\nWhat would you like to do? \n 1. Hit Me \n 2. Hold");
-                int choice = input.nextInt();
-                input.nextLine();
+                int choice = 1;
+
+//                input.nextLine();
 
                 switch (choice) {
                     case 1 -> GameRules.blackJackHitMe(deck, player.getHand());

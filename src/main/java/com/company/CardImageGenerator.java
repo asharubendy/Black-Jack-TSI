@@ -19,15 +19,13 @@ public class CardImageGenerator {
             rightCorner ="   |";
             leftCorner ="|   ";
         }
-        
+
         switch (type) {
             case "Clubs" -> cardType = "\n|  ♣  |\n";
             case "Diamonds" -> cardType = "\n|  ♦  |\n";
             case "Hearts" -> cardType = "\n|  ♥  |\n";
             case "Spades" -> cardType = "\n|  ♠  |\n";
             default -> cardType = "\n|  ?  |\n";
-
-
         }
         System.out.println("\n _____\n" + "|" + cardValue + rightCorner + cardType + leftCorner + cardValue + "|\n" + " ¯¯¯¯¯");
 

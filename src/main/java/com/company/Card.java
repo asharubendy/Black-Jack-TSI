@@ -9,6 +9,7 @@ public class Card extends Deck {
         this.cardValue = cardValue;
         suit = suitInput;
     }
+
     public int getCardValue() {
         return cardValue;
     }
