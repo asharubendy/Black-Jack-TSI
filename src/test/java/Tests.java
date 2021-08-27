@@ -7,7 +7,7 @@ import java.util.Stack;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class Tests {
+class Tests {
     //Card Tests
     @Test
     @DisplayName("A test to check the instantiation of card works correctly")
@@ -15,6 +15,7 @@ public class Tests {
    Card c = new Card(1,"Diamond");
    assertEquals(c.getSuit(), "Diamond", "Test failed for assertion of getting suit type");
    assertEquals(c.getCardValue(), 1, "Test failed for assertion of getting card value");
+
     }
 
     @Test
@@ -32,7 +33,6 @@ public class Tests {
         c.setCardValue(2);
         assertEquals(c.getCardValue(),c.getCardValue(), "Test failed for assertion of card value");
     }
-
     @Test
     @DisplayName("A test to check the setters and getters of card type")
     void CardTypeTest() {
@@ -111,7 +111,7 @@ public class Tests {
     String testInput[] = {"Test","test2","test3","test4"};
     String actualinput[] = d.getSuitType();
     d.setSuitType(testInput);
-    assertNotEquals(d.getSuitType(),actualinput, "Test test failed due to not setting the suit types of the deck");
+    assertNotEquals(actualinput,d.getSuitType(), "Test test failed due to not setting the suit types of the deck");
     }
     @Test
     @DisplayName("Test to get suit types")
@@ -119,7 +119,7 @@ public class Tests {
         Deck d = new Deck();
         int amount = d.getAmount();
         d.setAmount(66);
-        assertNotEquals(d.getAmount(), amount, "the test failed due to not setting a different amount");
+        assertNotEquals(amount, d.getAmount(), "the test failed due to not setting a different amount");
     }
     //tests for game rules
     @Test
@@ -144,6 +144,39 @@ public class Tests {
         GameRules.blackJackDealNewHand(c,player.getHand(), dealer.getHand());
         player.getHand().trimToSize();
         assertEquals(5, dealer.getHand().size(), "This test failed because there are not two items in the stack");
+    }
+    @Test
+    @DisplayName("black jack hit me test")
+    void blackJackDealNewHandTest() {
+        Stack<Card> c = new Stack<>();
+        c = DeckGenerator.getDeck();
+        Player p = new Player();
+        Dealer d = new Dealer();
+        GameRules.blackJackDealNewHand(c, p.getHand(), d.getHand());
+
+    }
+    @Test
+    @DisplayName("")
+    void blackJackCheckHitMeTest() {
+        Stack<Card> c = new Stack<>();
+        c = DeckGenerator.getDeck();
+        Player p = new Player();
+        Dealer d = new Dealer();
+        GameRules.blackJackDealNewHand(c,p.getHand(), d.getHand());
+        GameRules.blackJackHitMe(c,p.getHand());
+        assertTrue(p.getHand().size() > 2, "Test failed since there are 2 or less cards still in the hand");
+    }
+
+    @Test
+    @DisplayName("BlackJack Check values test")
+    void blackJackCheckValuesTest() {
+        Stack<Card> c = new Stack<>();
+        c = DeckGenerator.getDeck();
+        Player p = new Player();
+        Dealer d = new Dealer();
+        GameRules.blackJackDealNewHand(c,p.getHand(), d.getHand());
+        System.out.println(GameRules.blackJackCheckValues(p.getHand()));
+        assertTrue(GameRules.blackJackCheckValues(p.getHand()) >= -1, "This test failed because the cards have failed to add up");
     }
 }
 
