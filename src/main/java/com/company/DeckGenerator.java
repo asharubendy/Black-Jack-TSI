@@ -4,7 +4,7 @@ import java.util.Stack;
 
 public final class DeckGenerator {
 
-    static Stack<Card>getDeck() {
+    public static Stack<Card>getDeck() {
         return generateDeck();
     }
 
