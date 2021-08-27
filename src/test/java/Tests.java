@@ -136,7 +136,7 @@ class Tests {
     }
     @Test
     @DisplayName("Test blackjack game rules")
-    void blackjackNewHand() {
+    void blackjackNewHandTest() {
         Stack <Card> c = new Stack<>();
         c = DeckGenerator.getDeck();
         Player player = new Player();
@@ -146,17 +146,7 @@ class Tests {
         assertEquals(5, dealer.getHand().size(), "This test failed because there are not two items in the stack");
     }
     @Test
-    @DisplayName("black jack hit me test")
-    void blackJackDealNewHandTest() {
-        Stack<Card> c = new Stack<>();
-        c = DeckGenerator.getDeck();
-        Player p = new Player();
-        Dealer d = new Dealer();
-        GameRules.blackJackDealNewHand(c, p.getHand(), d.getHand());
-
-    }
-    @Test
-    @DisplayName("")
+    @DisplayName("blackjack checks for hit me")
     void blackJackCheckHitMeTest() {
         Stack<Card> c = new Stack<>();
         c = DeckGenerator.getDeck();
@@ -178,6 +168,18 @@ class Tests {
         System.out.println(GameRules.blackJackCheckValues(p.getHand()));
         assertTrue(GameRules.blackJackCheckValues(p.getHand()) >= -1, "This test failed because the cards have failed to add up");
     }
+    @Test
+    @DisplayName("BlackJack Check values test")
+    void blackJackCheckValuesAboveThreshold(){
+        Stack<Card> c = new Stack<>();
+        c = DeckGenerator.getDeck();
+        Player p = new Player();
+            GameRules.blackJackAceRules(p.getHand());
+        for (Card t: p.getHand()){
+            assertNotEquals(11, t.getCardValue(), "one of these cards is 11");
+        }
+    }
+
 }
 
 
