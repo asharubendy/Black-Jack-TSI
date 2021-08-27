@@ -170,7 +170,7 @@ class Tests {
     }
     @Test
     @DisplayName("BlackJack Check values test")
-    void blackJackCheckValuesAboveThreshold(){
+    void blackJackCheckValuesAboveThresholdTest(){
         Stack<Card> c = new Stack<>();
         c = DeckGenerator.getDeck();
         Player p = new Player();
