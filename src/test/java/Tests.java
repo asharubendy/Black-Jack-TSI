@@ -143,7 +143,7 @@ class Tests {
         Dealer dealer = new Dealer();
         GameRules.blackJackDealNewHand(c,player.getHand(), dealer.getHand());
         player.getHand().trimToSize();
-        assertEquals(5, dealer.getHand().size(), "This test failed because there are not two items in the stack");
+        assertEquals(10, dealer.getHand().size(), "This test failed because there are not two items in the stack");
     }
     @Test
     @DisplayName("blackjack checks for hit me")
@@ -154,7 +154,7 @@ class Tests {
         Dealer d = new Dealer();
         GameRules.blackJackDealNewHand(c,p.getHand(), d.getHand());
         GameRules.blackJackHitMe(c,p.getHand());
-        assertTrue(p.getHand().size() > 10, "Test failed since there are 2 or less cards still in the hand");
+        assertTrue(p.getHand().size() > 2, "Test failed since there are 2 or less cards still in the hand");
     }
 
     @Test
