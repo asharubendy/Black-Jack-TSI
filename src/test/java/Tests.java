@@ -154,7 +154,7 @@ class Tests {
         Dealer d = new Dealer();
         GameRules.blackJackDealNewHand(c,p.getHand(), d.getHand());
         GameRules.blackJackHitMe(c,p.getHand());
-        assertTrue(p.getHand().size() > 2, "Test failed since there are 2 or less cards still in the hand");
+        assertTrue(p.getHand().size() > 10, "Test failed since there are 2 or less cards still in the hand");
     }
 
     @Test
