@@ -1,13 +1,23 @@
 import com.company.*;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-
 import java.util.Stack;
-
 import static org.junit.jupiter.api.Assertions.*;
 
+//import io.cucumber.core.gherkin.*;
+//import io.cucumber.junit.Cucumber;
+//import io.cucumber.junit.CucumberOptions;
+//import org.junit.runner.RunWith;
+
+
+
+
 class Tests {
+
+//    @RunWith(Cucumber.class)
+//    public class CucumberRunnerTest {
+//
+//    }
     //Card Tests
     @Test
     @DisplayName("A test to check the instantiation of card works correctly")
@@ -168,17 +178,17 @@ class Tests {
         System.out.println(GameRules.blackJackCheckValues(p.getHand()));
         assertTrue(GameRules.blackJackCheckValues(p.getHand()) >= -1, "This test failed because the cards have failed to add up");
     }
-    @Test
-    @DisplayName("BlackJack Check values test")
-    void blackJackCheckValuesAboveThresholdTest(){
-        Stack<Card> c = new Stack<>();
-        c = DeckGenerator.getDeck();
-        Player p = new Player();
-            GameRules.blackJackAceRules(p.getHand());
-        for (Card t: p.getHand()){
-            assertNotEquals(11, t.getCardValue(), "one of these cards is 11");
-        }
-    }
+//    @Test
+//    @DisplayName("BlackJack Check values test")
+//    void blackJackCheckValuesAboveThresholdTest(){
+//        Stack<Card> c = new Stack<>();
+//        c = DeckGenerator.getDeck();
+//        Player p = new Player();
+//            GameRules.blackJackAceRules(p.getHand());
+//        for (Card t: p.getHand()){
+//            assertNotEquals(11, t.getCardValue(), "one of these cards is 11");
+//        }
+//    }
 
 }
 

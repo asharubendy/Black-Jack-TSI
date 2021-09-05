@@ -1,4 +1,6 @@
 package com.company;
+import com.google.gson.Gson;
+
 import java.util.Collections;
 import java.util.Stack;
 
@@ -30,5 +32,7 @@ public final class DeckGenerator {
         Collections.shuffle(deck);
         return deck;
     }
-
+    public String DeckJson(){
+        return new Gson().toJson(getDeck());
+    }
 }

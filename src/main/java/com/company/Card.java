@@ -5,6 +5,7 @@ public class Card extends Deck {
     private String suit;
     private boolean isFaceCard;
     private String faceCardType;
+
     public Card(int cardValue, String suitInput) {
         this.cardValue = cardValue;
         suit = suitInput;
@@ -33,5 +34,13 @@ public class Card extends Deck {
     }
     public void setFaceCardType(String faceCardTypeInput) {
         faceCardType = faceCardTypeInput;
+    }
+
+    @Override
+    public String toString() {
+        return "{" +
+                "\"cardValue\":" + '\"' + cardValue + '\"' +
+                ", '\"suit\":" + '\"' + suit + '\"' +
+                '}';
     }
 }

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Main.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Black-Jack-TSI</a> &gt; <a href="index.source.html" class="el_package">com.company</a> &gt; <span class="el_source">Main.java</span></div><h1>Main.java</h1><pre class="source lang-java linenums">package com.company;
+import java.util.Scanner;
+import java.util.Stack;
+
+<span class="nc" id="L5">public class Main {</span>
+    static Stack&lt;Card&gt; deck;
+<span class="nc" id="L7">    static Player player = new Player();</span>
+<span class="nc" id="L8">    static Dealer dealer = new Dealer();</span>
+<span class="nc" id="L9">    static Scanner input = new Scanner(System.in);</span>
+
+    public static void main(String[] args) {
+        // write your code here
+<span class="nc" id="L13">        gameSetupBlackJack();</span>
+<span class="nc" id="L14">        gameLogicBlackJack();</span>
+<span class="nc" id="L15">    }</span>
+
+    public static void gameSetupBlackJack(){
+<span class="nc" id="L18">        deck = DeckGenerator.getDeck();</span>
+<span class="nc" id="L19">        GameRules.blackJackGameRules(deck);</span>
+<span class="nc" id="L20">        GameRules.blackJackDealNewHand(deck, player.getHand(), dealer.getHand());</span>
+<span class="nc" id="L21">    }</span>
+
+    public static void gameLogicBlackJack(){
+<span class="nc" id="L24">        boolean playerTurn = true;</span>
+        while(true) {
+<span class="nc" id="L26">            showHands();</span>
+<span class="nc bnc" id="L27" title="All 2 branches missed.">            if(GameRules.blackJackCheckValues(player.getHand()) == -1){</span>
+//                System.out.println(&quot;You've gone bust! Do you want to play again?&quot;);
+<span class="nc" id="L29">                break;</span>
+<span class="nc bnc" id="L30" title="All 2 branches missed.">            } else if(GameRules.blackJackCheckValues(player.getHand()) != 21) {</span>
+//                System.out.print(&quot;Your total is: &quot; + GameRules.blackJackCheckValues(player.getHand()));
+//                System.out.println(&quot;\nWhat would you like to do? \n 1. Hit Me \n 2. Hold&quot;);
+<span class="nc" id="L33">                int choice = 1;</span>
+
+//                input.nextLine();
+
+<span class="nc" id="L37">                GameRules.blackJackHitMe(deck, player.getHand());</span>
+<span class="nc" id="L38">            }  //                System.out.println(&quot;Win State&quot;);</span>
+
+        }
+<span class="nc" id="L41">    }</span>
+    public static void showHands(){
+<span class="nc" id="L43">        dealer.showHand();</span>
+<span class="nc" id="L44">        player.showHand();</span>
+<span class="nc" id="L45">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

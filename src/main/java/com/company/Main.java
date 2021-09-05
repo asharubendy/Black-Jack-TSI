@@ -1,8 +1,22 @@
 package com.company;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
 import java.util.Scanner;
 import java.util.Stack;
 
 public class Main {
+
+
+
+
     static Stack<Card> deck;
     static Player player = new Player();
     static Dealer dealer = new Dealer();
@@ -13,6 +27,8 @@ public class Main {
         gameSetupBlackJack();
         gameLogicBlackJack();
     }
+
+
 
     public static void gameSetupBlackJack(){
         deck = DeckGenerator.getDeck();

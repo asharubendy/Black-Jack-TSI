@@ -7,27 +7,27 @@ public class CardImageGenerator {
     }
 
 
-    private static void generateCardVisual(String type, int cardValue) {
+     public static String generateCardVisual(String type, int cardValue) {
         String leftCorner ="";
         String rightCorner = "";
         String cardType = "";
 
         if (cardValue < 9){
-            leftCorner ="|    ";
-            rightCorner ="    |";
+            leftCorner ="|&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp";
+            rightCorner ="&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|";
         } else {
-            rightCorner ="   |";
-            leftCorner ="|   ";
+            rightCorner ="&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|";
+            leftCorner ="|&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp ";
         }
 
         switch (type) {
-            case "Clubs" -> cardType = "\n|  ♣  |\n";
-            case "Diamonds" -> cardType = "\n|  ♦  |\n";
-            case "Hearts" -> cardType = "\n|  ♥  |\n";
-            case "Spades" -> cardType = "\n|  ♠  |\n";
-            default -> cardType = "\n|  ?  |\n";
+            case "Clubs" -> cardType = "\n|&nbsp&nbsp&nbsp♣&nbsp&nbsp&nbsp|\n";
+            case "Diamonds" -> cardType = "\n|&nbsp&nbsp&nbsp♦&nbsp&nbsp&nbsp|\n";
+            case "Hearts" -> cardType = "\n|&nbsp&nbsp&nbsp♥&nbsp&nbsp&nbsp|\ns";
+            case "Spades" -> cardType = "\n|&nbsp&nbsp&nbsp♠&nbsp&nbsp&nbsp|\n";
+            default -> cardType = "\n|&nbsp&nbsp&nbsp?&nbsp&nbsp&nbsp|\n";
         }
-        System.out.println("\n _____\n" + "|" + cardValue + rightCorner + cardType + leftCorner + cardValue + "|\n" + " ¯¯¯¯¯");
+        return ("{" + "<p> _____<br>" + "|" + cardValue  + rightCorner  + "<br>" + cardType +"<br>" + leftCorner + cardValue +  "|" + "<br>" + " ¯¯¯¯¯ </p>" + "}");
 
     }
 }
